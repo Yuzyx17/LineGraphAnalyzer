@@ -2,7 +2,7 @@
 THIS FILE IS FOR GLOBAL VARIABLES
 """
 
-NUM_DATA_GEN = 5
+NUM_DATA_GEN = 25
 IMAGE_PATH = f'images/'
 ANNOT_PATH = f'annotations/'
 MODEL_PATH = f'model/'

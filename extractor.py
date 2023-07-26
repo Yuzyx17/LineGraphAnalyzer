@@ -26,7 +26,7 @@ class Canvas:
             self.set_bb_process()
         else:
             self.set_bb_vgg()
-    
+ 
     def set_bb_process(self):
         _, binary = cv2.threshold(self.gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 

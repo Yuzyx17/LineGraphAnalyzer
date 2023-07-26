@@ -13,6 +13,7 @@ class LineGraph:
         self.std_dev = 0
         self.median = 0
         self.mean = 0
+        self.summary = ""
 
     def set_points(self, points):
         self.points = points
@@ -132,10 +133,16 @@ class LineGraph:
                 data_statistics += "The standard deviation is equal to the mean, indicating uniform variability around the mean. This suggests a consistent level of fluctuations in the trend. "
 
         # Combine information
-        summary = trend_summary + " " + detailed_summary + " " + implications + " " + data_statistics
+        self.summary = trend_summary + " " + detailed_summary + " " + implications + " " + data_statistics
         print(summary)
         print(self.points.index([global_max['x'], global_max['y']]))
 
+
+    """
+    PARAPHRASE SELF.SUMMARY here
+    """
+    def paraphrase(self):
+        ...
 
 class Interpreter:
     def __init__(self, actual: LineGraph, predicted: LineGraph):

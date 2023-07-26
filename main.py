@@ -9,7 +9,7 @@ THIS FILE IS FOR TESTING AND RUNNING
 """
 index = 2
 image = cv2.imread(IMG.format(index))
-canvas = Canvas(image, mode=0) 
+canvas = Canvas(image, mode=1) 
 labels = LabelExtractor(canvas)
 points = PointExtractor(canvas)
 labels.extractLabel()

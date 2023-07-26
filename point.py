@@ -37,6 +37,8 @@ class PointExtractor():
         # Apply dilation to thicken the lines
         dilated = cv2.dilate(binary, kernel, iterations=2)
         # cv2.imshow("",dilated)
+        plt.imshow(dilated)
+        plt.show()
         return dilated
 
     def extractPoints(self):
@@ -78,7 +80,7 @@ class PointExtractor():
         myx = [coord[0] for coord in self.points]
         myy = [coord[1] for coord in self.points]
 
-        if self.show:
-            plt.plot(myx, myy, linestyle="-", color="blue")
-            plt.plot(myx, myy, marker=".", linestyle="", color="black")
-            plt.show()
+        # if self.show:
+        plt.plot(myx, myy, linestyle="-", color="blue")
+        plt.plot(myx, myy, marker=".", linestyle="", color="black")
+        plt.show()
